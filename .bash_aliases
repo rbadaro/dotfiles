@@ -20,10 +20,11 @@ export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 alias grep='grep --colour -n -H'
 
 alias brc='vi ~/.bash_profile'
-alias rr='. ~/.bash_profile'
+alias ss='. ~/.bash_profile'
 
 #-----------------
 # Machine specific
 #-----------------
-alias ws='cd /Users/rbadaro/Documents/workspace'
-alias projs='cd /Users/rbadaro/Projects'
+if [ -f .bash_aliases_machine ]; then
+    . .bash_aliases_machine
+fi
