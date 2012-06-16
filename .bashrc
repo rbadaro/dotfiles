@@ -28,9 +28,11 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 # Greeting, motd, goodbye
-echo -e "This is BASH ${BASH_VERSION%.*}\n"
-date
-fortune -s
+if [ $TERM == "xterm" ]; then
+    echo -e "This is BASH ${BASH_VERSION%.*}\n"
+    date
+    fortune -s
+fi
 
 function _exit()        # Function to run upon exit of shell.
 {
@@ -53,7 +55,7 @@ function xtitle()      # Adds some text in the terminal frame.
 
 
 # .. and functions
-function man()
+function __man()
 {
     for i ; do
         xtitle The $(basename $1|tr -d .[:digit:]) manual

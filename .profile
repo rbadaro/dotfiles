@@ -1,5 +1,5 @@
 
-if [ -f .profile_machine]; then
+if [ -f .profile_machine ]; then
     . .profile_machine
 fi
 
