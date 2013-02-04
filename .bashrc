@@ -162,3 +162,7 @@ function ask()          # See 'killps' for example of use.
         *) return 1 ;;
     esac
 }
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
